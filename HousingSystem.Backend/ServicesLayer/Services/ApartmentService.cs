@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using HousingSystem.DomainLayer.Entities;
 using HousingSystem.DomainLayer.Interfaces;
-using ServicesLayer.Interfaces;
+using HousingSystem.ServicesLayer.Interfaces;
 
 namespace ServicesLayer.Services
 {

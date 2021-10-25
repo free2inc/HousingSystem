@@ -1,4 +1,4 @@
-﻿namespace ServicesLayer.Models
+﻿namespace HousingSystem.ServicesLayer.Models
 {
     public class BuildingModel
     {

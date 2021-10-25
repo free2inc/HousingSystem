@@ -7,12 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using HousingSystem.Authentication;
 using HousingSystem.DomainLayer.Entities;
+using HousingSystem.RepositoryLayer.Authentication;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using RepositoryLayer.Authentication;
 
 namespace HousingSystem.Controllers
 {
@@ -65,7 +65,8 @@ namespace HousingSystem.Controllers
                 return Ok(new
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
+                    expiration = token.ValidTo,
+                    isAdmin = user.UserName == "admin" ? true : false
                 });
             }
             return Unauthorized();
@@ -89,6 +90,8 @@ namespace HousingSystem.Controllers
             if (!result.Succeeded)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "USER creation failed! Please check user details and try again." });
 
+            if (!await roleManager.RoleExistsAsync(UserRoles.USER))
+                await roleManager.CreateAsync(new IdentityRole(UserRoles.USER));
             return Ok(new Response { Status = "Success", Message = "USER created successfully!" });
         }
 

@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 using HousingSystem.DomainLayer.Entities;
 using HousingSystem.DomainLayer.Interfaces;
 using HousingSystem.ServicesLayer.Interfaces;
+using HousingSystem.ServicesLayer.Models;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using ServicesLayer.Interfaces;
-using ServicesLayer.Models;
 
 namespace HousingSystem.ServicesLayer.Services
 {

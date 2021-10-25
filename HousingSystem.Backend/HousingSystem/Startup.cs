@@ -20,7 +20,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using RepositoryLayer;
-using ServicesLayer.Interfaces;
 using ServicesLayer.Services;
 
 

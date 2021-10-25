@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using HousingSystem.DomainLayer.Entities;
-using ServicesLayer.Models;
+using HousingSystem.ServicesLayer.Models;
 
 namespace HousingSystem.ServicesLayer.Interfaces
 {

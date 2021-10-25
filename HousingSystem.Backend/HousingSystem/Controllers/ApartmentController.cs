@@ -1,18 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Threading.Tasks;
 using AutoMapper;
 using DomainLayer.Dtos;
 using HousingSystem.DomainLayer.Entities;
-using HousingSystem.Dto.Apartment;
-using Microsoft.AspNetCore.Authorization;
+using HousingSystem.ServicesLayer.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using ServicesLayer.Interfaces;
-using CreateBuildingDto = HousingSystem.Dto.Building.CreateBuildingDto;
 
-namespace HousingSystem.Controllers
+namespace HousingSystem.WebApi.Controllers
 {
     //[Authorize]
     [Route("api/[controller]")]
@@ -48,8 +43,6 @@ namespace HousingSystem.Controllers
 
             try
             {
-                //var apartment = _apartmentService.GetApartment(id);
-                //result = _mapper.Map<>(apartment);
                 result = _apartmentService.GetApartment(id);
             }
             catch (Exception ex)
@@ -77,7 +70,7 @@ namespace HousingSystem.Controllers
 
 
         [HttpPost(nameof(CreateApartment))]
-        public IActionResult CreateApartment([FromBody] ICreateApartmentDto apartmentDto)
+        public IActionResult CreateApartment([FromBody] CreateApartmentDto apartmentDto)
         {
             var apartment = new Apartment()
             {
@@ -95,7 +88,7 @@ namespace HousingSystem.Controllers
 
 
         [HttpPut(nameof(UpdateApartment))]
-        public IActionResult UpdateApartment(ICreateApartmentDto apartmentDto)
+        public IActionResult UpdateApartment(CreateApartmentDto apartmentDto)
         {
 
             var some = apartmentDto;

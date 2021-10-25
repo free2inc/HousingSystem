@@ -6,10 +6,11 @@ using AutoMapper;
 using DomainLayer.Dtos;
 using HousingSystem.Controllers;
 using HousingSystem.DomainLayer.Entities;
+using HousingSystem.ServicesLayer.Interfaces;
+using HousingSystem.WebApi.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using ServicesLayer.Interfaces;
 using Xunit;
 
 namespace HousingSystem.Tests.Controllers
@@ -87,10 +88,10 @@ namespace HousingSystem.Tests.Controllers
             var apartment = GetTestApartments()[0];
 
 
-            _serviceMock.Setup(mock => mock.CreateApartment(apartment)).Returns(apartment);
+            _serviceMock.Setup(mock => mock.CreateApartment(apartment));
             var result = _apartmentController.CreateApartment(new CreateApartmentDto()) as OkObjectResult;
 
-            Assert.Equal(apartment, result?.Value);
+            Assert.Equal("Data inserted", result?.Value);
         }
 
 

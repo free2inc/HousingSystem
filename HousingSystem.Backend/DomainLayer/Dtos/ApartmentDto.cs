@@ -13,30 +13,15 @@ namespace DomainLayer.Dtos
         public int Floor { get; set; }
     }
 
-    public interface ICreateApartmentDto
-    {
-        public int NumberOfRooms { get; set; }
-        public float Area { get; set; }
-        public int Floor { get; set; }
-        public int BuildingId { get; set; }
-    }
 
-    public class CreateApartmentDto : ICreateApartmentDto
+    public class CreateApartmentDto
     {
         public int NumberOfRooms { get; set; }
         public float Area { get; set; }
         public int Floor { get; set; }
         public int BuildingId { get; set; }
     }
-
-    public class CreateApartment2Dto : ICreateApartmentDto
-    {
-        public int NumberOfRooms { get; set; }
-        public float Area { get; set; }
-        public int Floor { get; set; }
-        public int BuildingId { get; set; }
-        public int Some { get; set; }
-    }
+   
 
     public class EditApartmentDto
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using HousingSystem.DomainLayer.Entities;
 
-namespace ServicesLayer.Interfaces
+namespace HousingSystem.ServicesLayer.Interfaces
 {
     public interface IApartmentService
     {

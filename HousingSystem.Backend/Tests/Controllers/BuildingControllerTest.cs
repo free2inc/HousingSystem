@@ -5,11 +5,10 @@ using HousingSystem.Controllers;
 using HousingSystem.DomainLayer.Entities;
 using HousingSystem.Dto.Building;
 using HousingSystem.ServicesLayer.Interfaces;
+using HousingSystem.ServicesLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using ServicesLayer.Interfaces;
-using ServicesLayer.Models;
 using Xunit;
 
 namespace HousingSystem.Tests.Controllers

@@ -6,7 +6,6 @@ using HousingSystem.ServicesLayer.Interfaces;
 using HousingSystem.ServicesLayer.Services;
 using Microsoft.Extensions.Logging;
 using Moq;
-using ServicesLayer.Interfaces;
 using ServicesLayer.Services;
 using Xunit;
 

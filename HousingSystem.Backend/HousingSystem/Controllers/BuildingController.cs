@@ -8,7 +8,6 @@ using HousingSystem.DomainLayer.Entities;
 using HousingSystem.Dto.Building;
 using HousingSystem.ServicesLayer.Interfaces;
 using Microsoft.Extensions.Logging;
-using ServicesLayer.Interfaces;
 
 namespace HousingSystem.Controllers
 {
@@ -83,7 +82,7 @@ namespace HousingSystem.Controllers
         {
             try
             {
-                if (_buildingService.ReserveBuilding(buildingDto.CityAdminBuildingId).Result)
+                //if (_buildingService.ReserveBuilding(buildingDto.CityAdminBuildingId).Result)
                 {
                     var building = new Building()
                     {

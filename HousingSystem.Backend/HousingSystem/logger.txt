@@ -224,3 +224,11 @@ Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: D:\dotnet\epam\lab\Housing\HousingSystem.Backend\HousingSystem
 Get All Apartment: System.Collections.Generic.List`1[DomainLayer.Entities.Apartment]
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\dotnet\epam\HousingSystem\HousingSystem.Backend\HousingSystem
+User password validation failed: PasswordTooShort;PasswordRequiresNonAlphanumeric;PasswordRequiresDigit;PasswordRequiresUpper.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: D:\dotnet\epam\HousingSystem\HousingSystem.Backend\HousingSystem
+User password validation failed: PasswordTooShort;PasswordRequiresNonAlphanumeric;PasswordRequiresDigit;PasswordRequiresUpper.
