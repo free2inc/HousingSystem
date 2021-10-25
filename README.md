@@ -6,7 +6,7 @@
 
 The Catering application is built according to the Onion architecture and consists of the following components:
 
-![structure](https://user-images.githubusercontent.com/84620072/136130919-a3110363-e78c-41d4-82f2-5363e65508ed.png)
+![structure](https://github.com/free2inc/HousingSystem/blob/main/docs/Structure.png)
 
 - DB is a relational database that stores application state in tables.
 - Back-end Application is a separate .NET application that implements a web service.
@@ -16,7 +16,7 @@ The Catering application is built according to the Onion architecture and consis
 
 The structure of the database is shown in the figure
 
-![restuml](https://user-images.githubusercontent.com/84620072/136130715-6a3eb029-8f82-4e29-bb58-39ddfe121571.png)
+![restuml](https://github.com/free2inc/HousingSystem/blob/main/docs/DB.png)
 
 ### Back-end Application Description
 
